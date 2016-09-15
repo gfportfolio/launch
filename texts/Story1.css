@@ -1,0 +1,62 @@
+Hi! My name is Gavin Farnsworth.
+~
+~I am a software developer for Leavitt Software Solutions.
+~
+~Lets have some fun shall we.
+~
+~First of all I dont know about this background color.   Its to white for me.
+
+~How about a nice sky blue.
+
+~^#body {
+~width: 100%;
+~height:100%;
+~background: #66ccff;
+~   }
+^
+~
+~Now isn't that better.
+~
+~Lets do some other things to set the page up.
+
+~^  #console-area{
+~width: 50%;
+~height:40%;
+~float: right;
+~overflow-y: scroll;
+~ background:#000000;
+~ color:#ffffff;
+~font-family: 'Comic Sans MS', cursive;
+~font-size: 15px;
+~padding: 20px;
+~margin: 10px;
+~border-style: solid;
+~border-width: medium;
+~border-color: #b3b3b3;
+~border-radius: 10px;
+~}^
+~
+~Sorry about the flicker.
+~Thats what happens when the website is changing on the fly.
+~
+~So how about I tell you a few things about me.
+~There are a few things I am passionate about.
+~<ῑ>bug_report</i> Programming
+~<ῑ>camera_enhance</i> Photography
+~<ῑ>android</i> Android
+~<ῑ>star</i> Spacex
+~<ῑ>local_activity</i> Disney
+~
+~Hold on that does not look right...
+~^  #icon1{
+~ color:#009933;
+~font-size: 15px;
+~vertical-align: middle;
+~}^
+~
+~Here is the list again incase you missed it.
+~<ῑ>bug_report</i> Programming
+~<ῑ>camera_enhance</i> Photography
+~<ῑ>android</i> Android
+~<ῑ>star</i> Spacex
+~<ῑ>local_activity</i> Disney
