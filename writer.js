@@ -10,6 +10,7 @@ const pxRegex = /\dp/;
 const pxRegex2 = /p$/;
 let styleBuffer = '';
 const fullTextStorage = {};
+var area = consoleArea;
 function writeTo(el, message, index, interval, mirrorToStyle, charsPerInterval){
 //  if (animationSkipped) {
     // Lol who needs proper flow control
@@ -21,13 +22,33 @@ function writeTo(el, message, index, interval, mirrorToStyle, charsPerInterval){
 
   // Ensure we stay scrolled to the bottom.
   el.scrollTop = el.scrollHeight;
+if(chars ==='ᴀ'){
+  area = consoleArea;
+}
+else if(chars ==='ᴃ'){
+  area = progskills;
+}
+else if(chars ==='ᴄ'){
 
+}
+else if(chars ==='ᴅ'){
+
+}
+else if(chars ==='ᴇ'){
+
+}
+else if(chars ==='ᴍ'){
+
+}
+else {
+  writeChar(area, chars, style);
+}
   // If this is going to <style> it's more complex; otherwise, just write.
-  if (mirrorToStyle) {
-    writeChar(el, chars, style);
-  } else {
-    writeSimpleChar(el, chars);
-  }
+//  if (mirrorToStyle) {
+//writeChar(area, chars, style);
+//  } else {
+//    writeSimpleChar(area, chars);
+//  }
 
   // Schedule another write.
   if (index < message.length) {
@@ -64,6 +85,12 @@ writeChar = function (el, char, style){
 
 var instyle = false;
 
+/*font-family: 'Indie Flower', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Chewy', cursive;
+font-family: 'Courgette', cursive;
+font-family: 'Rock Salt', cursive;
+*/
 
 handleChar = function(fullText, char) {
   if (openComment && char !== '/') {
@@ -89,6 +116,8 @@ handleChar = function(fullText, char) {
     fullText+='<br>';
   }else if (char=== 'ῑ' ){
     fullText+="i id='icon1' class='material-icons'";
+  }else if (char=== 'ᵢ' ){
+    fullText+="i id='icon2' class='material-icons'";
   }else if (char=== '~' ){
     fullText+='<br>';
   }else if (char=== '^' ){

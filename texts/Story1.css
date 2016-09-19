@@ -1,4 +1,4 @@
-Hi! My name is Gavin Farnsworth.
+ᴀHi! My name is Gavin Farnsworth.
 ~
 ~I am a software developer for Leavitt Software Solutions.
 ~
@@ -8,11 +8,8 @@ Hi! My name is Gavin Farnsworth.
 
 ~How about a nice sky blue.
 
-~^#body {
-~width: 100%;
-~height:100%;
-~background: #66ccff;
-~   }
+~^
+body { background: #66ccff !Important }
 ^
 ~
 ~Now isn't that better.
@@ -20,12 +17,12 @@ Hi! My name is Gavin Farnsworth.
 ~Lets do some other things to set the page up.
 
 ~^  #console-area{
+  ~ background:#000000;
+  ~ color:#ffffff;
 ~width: 50%;
 ~height:40%;
 ~float: right;
 ~overflow-y: scroll;
-~ background:#000000;
-~ color:#ffffff;
 ~font-family: 'Comic Sans MS', cursive;
 ~font-size: 15px;
 ~padding: 20px;
@@ -34,6 +31,8 @@ Hi! My name is Gavin Farnsworth.
 ~border-width: medium;
 ~border-color: #b3b3b3;
 ~border-radius: 10px;
+~display: inline-block;
+~box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 ~}^
 ~
 ~Sorry about the flicker.
@@ -53,10 +52,40 @@ Hi! My name is Gavin Farnsworth.
 ~font-size: 15px;
 ~vertical-align: middle;
 ~}^
-~
+~Thats better.
 ~Here is the list again incase you missed it.
 ~<ῑ>bug_report</i> Programming
 ~<ῑ>camera_enhance</i> Photography
 ~<ῑ>android</i> Android
 ~<ῑ>star</i> Spacex
 ~<ῑ>local_activity</i> Disney
+~
+~
+~Lets talk about my programming skills a little.
+~Warning I am going to brag a bit here. It is my website.  I can do what I want.
+~
+~I think we need another box for this.
+~^  #prog-skills{
+~display: inline-block;
+~margin: 10px;
+~ background:#7384FF;
+~ color:#00031A;
+~width: 45%;
+~height:40%;
+~font-family: 'Comic Sans MS', cursive;
+~font-size: 15px;
+~padding: 20px;
+~border-style: hidden;
+~border-width: medium;
+~border-color: #000529;
+~border-radius: 10px;
+~box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+~}^
+~
+~Now for the text.
+ᴃ~<h3>Languages</h3>
+~<span id='progexp1'>Javascript</span><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i>
+~<span id='progexp1'>CSS</span><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i>
+~<span id='progexp1'>C#</span><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i>
+~<span id='progexp1'>SQL</span><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i>
+~<span id='progexp1'>Java</span><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i>
