@@ -3,18 +3,19 @@ var circleRadius =300;
 var littleCircleDiameter =100
 var speed=4;
 var divider =25;
-var totalCirclesOnScreen=5;
+var totalCirclesOnScreen=6;
 var currentImageCounter =0;
 var largeImage ="photoalbum/blank.jpg";
-  var circles;
-  var centerPositionX;
-  var centerPositionY;
-     var bigCircle;
+var circles;
+var centerPositionX;
+var centerPositionY;
+var bigCircle;
+var directionForward=true;
 var setup = function(){
   var circleModel = document.getElementById('circle-model');
   var circleHolder = document.getElementById('circles-holder');
   bigCircle = document.getElementById('big-circle');
-  var genBox = document.getElementById('genbox');
+  var genBox = document.getElementById('gen-box');
   circles= new Array();
   var height = window.innerHeight;
   var width =window.innerWidth;
@@ -22,6 +23,7 @@ var setup = function(){
   centerPositionY = height/2;
   bigCircle.style.left = centerPositionX-circleRadius+littleCircleDiameter+5;
   bigCircle.style.top = centerPositionY-circleRadius+littleCircleDiameter+5;
+
 
   makecircles(circleModel,  circleHolder);
   startAnimation();
@@ -56,26 +58,72 @@ function startAnimation(){
 
 function animation(){
   for(var i=0; i <=circles.length-1; i++ ){
-     circles[i].degree = circles[i].degree+1/divider;
-    if(circles[i].degree>=360){
-      circles[i].degree-=360;
-      circles[i].changeimage = true;
-      circles[i].assignImg =true;
-    }
-    if(circles[i].degree>=90 && circles[i].changeimage==true){
-      circles[i].elem.childNodes[0].src='photoalbum/'+currentImageCounter+'.jpg';
-      circles[i].elem.childNodes[0].className += " img";
-      imgcountIncrement();
-      circles[i].changeimage =false;
+    if(!directionForward){
+      circles[i].degree = circles[i].degree-1/divider;
+      if(circles[i].degree<=0){
+        circles[i].degree+=360;
+        circles[i].changeimage = true;
+        circles[i].assignImg =true;
+      }
+      if(circles[i].degree<=90 && circles[i].changeimage==true){
+        circles[i].elem.childNodes[0].src='photoalbum/'+currentImageCounter+'.jpg';
+        circles[i].elem.childNodes[0].className += " img";
+        imgcountIncrement();
+        circles[i].changeimage =false;
 
+      }
+      if(circles[i].degree<=300 && circles[i].assignImg==true){
+        largeImage =circles[i].elem.childNodes[0].src;
+        $("#big-circle-img").fadeOut('slow',function(){
+          bigCircle.childNodes[0].src = largeImage;
+          $("#big-circle-img").fadeIn('slow');
+        });
+        circles[i].assignImg =false;
+      }
     }
-    if(circles[i].degree>=245 && circles[i].assignImg==true){
-      largeImage =circles[i].elem.childNodes[0].src;
-      $("#big-circle-img").fadeOut('slow',function(){
-        bigCircle.childNodes[0].src = largeImage;
-        $("#big-circle-img").fadeIn('slow');
-      });
-      circles[i].assignImg =false;
+    else{
+      circles[i].degree = circles[i].degree+1/divider;
+      if(circles[i].degree>=360){
+        circles[i].degree-=360;
+        circles[i].changeimage = true;
+        circles[i].assignImg =true;
+      }
+      if(circles[i].degree>=90 && circles[i].changeimage==true){
+        circles[i].elem.childNodes[0].src='photoalbum/'+currentImageCounter+'.jpg';
+        circles[i].elem.childNodes[0].className += " img";
+        imgcountIncrement();
+        circles[i].changeimage =false;
+
+      }
+      if(circles[i].degree>=245 && circles[i].assignImg==true){
+        largeImage =circles[i].elem.childNodes[0].src;
+        $("#big-circle-img").fadeOut('slow',function(){
+          bigCircle.childNodes[0].src = largeImage;
+          $("#big-circle-img").fadeIn('slow');
+        });
+        circles[i].assignImg =false;
+      }
+      circles[i].degree = circles[i].degree+1/divider;
+      if(circles[i].degree>=360){
+        circles[i].degree-=360;
+        circles[i].changeimage = true;
+        circles[i].assignImg =true;
+      }
+      if(circles[i].degree>=90 && circles[i].changeimage==true){
+        circles[i].elem.childNodes[0].src='photoalbum/'+currentImageCounter+'.jpg';
+        circles[i].elem.childNodes[0].className += " img";
+        imgcountIncrement();
+        circles[i].changeimage =false;
+
+      }
+      if(circles[i].degree>=245 && circles[i].assignImg==true){
+        largeImage =circles[i].elem.childNodes[0].src;
+        $("#big-circle-img").fadeOut('slow',function(){
+          bigCircle.childNodes[0].src = largeImage;
+          $("#big-circle-img").fadeIn('slow');
+        });
+        circles[i].assignImg =false;
+      }
     }
     var radians = circles[i].degree* (Math.PI / 180);
     var x = centerPositionX+circleRadius*Math.cos(radians);
@@ -86,9 +134,17 @@ function animation(){
 }
 
 function imgcountIncrement(){
-  currentImageCounter++;
-  if(currentImageCounter>totalImages){
-    currentImageCounter=0;
+  if(directionForward){
+    currentImageCounter++;
+    if(currentImageCounter>totalImages){
+      currentImageCounter=0;
+    }
+  }
+  else{
+    currentImageCounter--;
+    if(currentImageCounter<0){
+      currentImageCounter=totalImages;
+    }
   }
 
 }
