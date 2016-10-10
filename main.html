@@ -2,7 +2,7 @@
 <head>
   <style id="style-tag"></style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Chewy|Courgette|Indie+Flower|Pacifico|Rock+Salt" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
   <style>
@@ -24,6 +24,44 @@
   border-radius: 10px;
 }
 
+#prog-skills::-webkit-scrollbar-track
+{
+//	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+border-radius: 10px;
+background-color: #7384FF;
+border-radius: 10px;
+}
+
+#prog-skills::-webkit-scrollbar
+{
+width: 12px;
+background-color: #7384FF;
+border-radius: 10px;
+}
+#prog-skills::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0px -2px 2px rgba(0,0,0,1.5), inset 0px 2px 2px rgba(255,255,255,1.8);
+	background-color: #b3b3b3;
+  border-radius: 10px;
+}
+#bottom-area {
+  position: absolute;
+    bottom: 20px;
+    width:100%;
+}
+
+#slider{
+  width: 10%;
+  margin:10px;
+  float: right;
+}
+
+#links{
+  float: right;
+  margin-right: 10px;
+}
+
 #console-area::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
@@ -31,10 +69,29 @@
 	background-color: #b3b3b3;
   border-radius: 10px;
 }
-
+input[type='range'] {
+    -webkit-appearance: none !important;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #333;
+    background-color: #999;
+    height: 10px;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+   border-radius: 20px;
+   background-color: #33cc33;
+   box-shadow:inset 0 0 10px rgba(000,000,000,0.5);
+   border: 1px solid #003300;
+   height: 20px;
+   width: 20px;
+}
 #progexp1 {
-  width:100px;
+  width:120px;
   float: left;
+}
+
+#icon3{
+  color:#ff9900;
 }
   </style>
 </head>
@@ -42,6 +99,15 @@
   <div id='body'>
     <div id = 'prog-skills'></div>
 <div id = 'console-area'></div>
+<div id = 'photo-area'></div>
+<div id='bottom-area'>
+  <div id='links'>
+    <a href="https://github.com/gfportfolio"><img src="/img/github.png" style="width:30px; height:30px"></a>
+    <a href="https://www.linkedin.com/in/gavin-farnsworth-791bb3a"><img src="/img/linkedin.png" style="width:30px; height:30px"></a>
+    <a href="https://plus.google.com/+GavinFarnsworth"><img src="/img/gplus.png" style="width:30px; height:30px"></a>
+  </div>
+  <input type='range' name="speed" min="-200" max="0" value="-60" step="1" id='slider' oninput="sliderVal(this.value)" onchange="sliderVal(this.value)"></input>
+
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

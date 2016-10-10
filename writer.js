@@ -11,7 +11,7 @@ const pxRegex2 = /p$/;
 let styleBuffer = '';
 const fullTextStorage = {};
 var area = consoleArea;
-function writeTo(el, message, index, interval, mirrorToStyle, charsPerInterval){
+function writeTo(el, message, index,  mirrorToStyle, charsPerInterval){
 //  if (animationSkipped) {
     // Lol who needs proper flow control
 //    throw new Error('SKIP IT');
@@ -29,7 +29,7 @@ else if(chars ==='ᴃ'){
   area = progskills;
 }
 else if(chars ==='ᴄ'){
-
+  area = photoarea;
 }
 else if(chars ==='ᴅ'){
 
@@ -52,12 +52,12 @@ else {
 
   // Schedule another write.
   if (index < message.length) {
-    let thisInterval = interval;
+    let thisInterval = timeoutSpeed;
     let thisSlice = message.slice(index - 2, index + 1);
-    if (comma.test(thisSlice)) thisInterval = interval * 30;
-    if (endOfBlock.test(thisSlice)) thisInterval = interval * 50;
-    if (endOfSentence.test(thisSlice)) thisInterval = interval * 70;
-setTimeout(function(){writeTo(el, message, index, interval, mirrorToStyle, charsPerInterval);}, interval);
+    if (comma.test(thisSlice)) thisInterval = timeoutSpeed * 30;
+    if (endOfBlock.test(thisSlice)) thisInterval = timeoutSpeed * 50;
+    if (endOfSentence.test(thisSlice)) thisInterval = timeoutSpeed * 70;
+setTimeout(function(){writeTo(el, message, index, mirrorToStyle, charsPerInterval);}, timeoutSpeed);
 
 
   //  return writeTo(el, message, index, interval, mirrorToStyle, charsPerInterval);
@@ -118,6 +118,8 @@ handleChar = function(fullText, char) {
     fullText+="i id='icon1' class='material-icons'";
   }else if (char=== 'ᵢ' ){
     fullText+="i id='icon2' class='material-icons'";
+  }else if (char=== 'ḭ' ){
+    fullText+="i id='icon3' class='material-icons'";
   }else if (char=== '~' ){
     fullText+='<br>';
   }else if (char=== '^' ){

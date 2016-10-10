@@ -4,6 +4,8 @@
 ~
 ~Lets have some fun shall we.
 ~
+~If you get board you can speed me up using the slider at the bottom of the screen.
+~
 ~First of all I dont know about this background color.   Its to white for me.
 
 ~How about a nice sky blue.
@@ -71,9 +73,9 @@ body { background: #66ccff !Important }
 ~ background:#7384FF;
 ~ color:#00031A;
 ~width: 45%;
-~height:40%;
-~font-family: 'Comic Sans MS', cursive;
-~font-size: 15px;
+~height:90%;
+~font-family: 'Montserrat', sans-serif;
+~font-size: 20px;
 ~padding: 20px;
 ~border-style: hidden;
 ~border-width: medium;
@@ -83,9 +85,34 @@ body { background: #66ccff !Important }
 ~}^
 ~
 ~Now for the text.
-ᴃ~<h3>Languages</h3>
-~<span id='progexp1'>Javascript</span><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i>
-~<span id='progexp1'>CSS</span><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i>
-~<span id='progexp1'>C#</span><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i>
-~<span id='progexp1'>SQL</span><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i>
-~<span id='progexp1'>Java</span><ᵢ>star</i><ᵢ>star</i><ᵢ>star</i>
+ᴃ<h2>Programming Skills</h2>
+<h3>Languages</h3>
+~<span id='progexp1'>SQL:</span><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i>
+~<span id='progexp1'>C#:</span><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i>
+~<span id='progexp1'>Javascript:</span><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i>
+~<span id='progexp1'>CSS:</span><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i>
+~<span id='progexp1'>Java:</span><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i>
+~<span id='progexp1'>Ruby:</span><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i>
+
+ᴀ~Lets pretty that up a bit
+~^  #icon2{
+~ color:#ffff00;
+~}^
+
+ᴃ~~<h3>Education</h3>
+Bacholers Degree in Computer Science from Southern Utah University
+~~<h3>Recent Projects</h3>
+This Website (Isn't it cool).
+~I need to put more here.
+ᴀ~Thats all for that section right now.
+~
+~Now that box is to big. :(.
+  ~^  #prog-skills{
+    ~overflow-y: scroll;
+  ~height:40% !important;
+  ~}^
+ᴃ~
+ᴀ~~Thats all for progarmming skills for now.
+~Now maybe we I can show off some of my Photos.  It think they are good for a amiture.
+~Let me put a slide show up for you
+~
