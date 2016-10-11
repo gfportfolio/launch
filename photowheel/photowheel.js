@@ -12,6 +12,8 @@ var centerPositionY;
 var bigCircle;
 var bigCircleImage;
 var directionForward=true;
+var imageArray;
+var paused = false;
 
 var setup = function(){
   var circleModel = document.getElementById('circle-model');
@@ -32,11 +34,11 @@ var setup = function(){
 };
 
 function preloadImages(){
-  var preloadImageCount =0;
-  while(preloadImageCount<=totalImages){
+  imageArray = new Array();
+  while(imageArray.length<=totalImages){
     var img=new Image();
-    img.src="photoalbum/"+preloadImageCount+".jpg";
-    preloadImageCount++;
+    img.src="photoalbum/"+(imageArray.length)+".jpg";
+    imageArray.push(img);
   }
 
 }
@@ -53,8 +55,10 @@ function makecircles(model, circleHolder){
       changeimage:true,
       assignImg:true,
       faded:true,
+      active:false,
+      imgsrc:"photoalbum/blank.jpg",
+      imgIndex:-1,
       context:$("#circle-img-"+(index+1))});
-      active=false;
     }
   }
 
@@ -89,7 +93,9 @@ backwardAnimation(i);
       circles[i].elem.style.top=y;
       highlightSelected(i);
     }
-    window.requestAnimationFrame(animation);
+    if(!paused){
+      window.requestAnimationFrame(animation);
+    }
   }
 
 
@@ -107,8 +113,11 @@ function forwardAnimation(index){
   }
 
   if(circles[index].degree>=90 && circles[index].changeimage){
-    circles[index].elem.childNodes[0].src='photoalbum/'+currentImageCounter+'.jpg';
-    circles[index].elem.childNodes[0].className += " img";
+    //circles[index].context.attr('src','photoalbum/'+currentImageCounter+'.jpg');
+    circles[index].context.attr('src',imageArray[currentImageCounter].src);
+    circles[index].imgIndex =currentImageCounter;
+    circles[index].imgsrc='photoalbum/'+currentImageCounter+'.jpg';
+    circles[index].context.className += " img";
     imgcountIncrement();
     circles[index].changeimage =false;
     circles[index].active=true;
@@ -122,7 +131,7 @@ function forwardAnimation(index){
   }
 
   if(circles[index].degree>=270 && circles[index].assignImg){
-    largeImage =circles[index].elem.childNodes[0].src;
+    largeImage =imageArray[circles[index].imgIndex].src;
     $("#big-circle-img").fadeOut('slow',function(){
       bigCircleImage.src = largeImage;
       $("#big-circle-img").fadeIn('slow');
@@ -150,14 +159,16 @@ function backwardAnimation(index){
     circles[index].faded =true;
   }
   if(circles[index].degree<=90 && circles[index].changeimage){
-    circles[index].elem.childNodes[0].src='photoalbum/'+currentImageCounter+'.jpg';
-    circles[index].elem.childNodes[0].className += " img";
+    circles[index].context.attr('src',imageArray[currentImageCounter].src);
+    circles[index].imgIndex =currentImageCounter;
+    circles[index].context.className += " img";
+    circles[index].imgsrc='photoalbum/'+currentImageCounter+'.jpg';
     imgcountIncrement();
     circles[index].changeimage =false;
 
   }
   if(circles[index].degree<=270 && circles[index].assignImg){
-    largeImage =circles[index].elem.childNodes[0].src;
+    largeImage =imageArray[circles[index].imgIndex].src;
     $("#big-circle-img").fadeOut('slow',function(){
       bigCircleImage.src = largeImage;
       $("#big-circle-img").fadeIn('slow');
@@ -200,6 +211,12 @@ function highlightSelected(index){
   };
   function nextClick(){
     directionForward = true;
+  };
+  function pauseClick(){
+    paused=!paused;
+    if(!paused){
+      animation();
+    }
   };
 
 

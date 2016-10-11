@@ -59,7 +59,7 @@
   }
 
   #back:hover{
-    opacity: 1;
+    opacity: .8;
   }
 
   #next{
@@ -74,7 +74,22 @@
   }
 
   #next:hover{
-    opacity: 1;
+    opacity: .8;
+  }
+
+  #pause{
+    top:45%;
+    left:42%;
+    position:absolute;
+    z-index:4;
+    font-size: 80px;
+    opacity: 0;
+    color:white;
+    cursor:pointer;
+  }
+
+  #pause:hover{
+    opacity: .8;
   }
   </style>
 </head>
@@ -83,6 +98,7 @@
   <img id = 'big-circle-img' class='big-circle' src="photoalbum/blank.jpg">
   <i id='back' class='material-icons ' onclick="backClick()">forward</i>
   <i id='next' class='material-icons ' onclick="nextClick()">forward</i>
+  <i id='pause' class='material-icons' onclick="pauseClick()">pause_circle_filled</i>
 </div>
 <div id='circles-holder'>
   <div id='circle-model' class='small-circle'><img id = 'img' class='small-circle ' src="photoalbum/blank.jpg"></div>
