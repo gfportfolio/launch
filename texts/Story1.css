@@ -43,10 +43,10 @@ body { background: #66ccff !Important }
 ~So how about I tell you a few things about me.
 ~There are a few things I am passionate about.
 ~<ῑ>bug_report</i> Programming
+~<ῑ>web_asset</i> Material Design
 ~<ῑ>camera_enhance</i> Photography
-~<ῑ>android</i> Android
 ~<ῑ>star</i> Spacex
-~<ῑ>local_activity</i> Disney
+~<ῑ>local_activity</i> Disney/Pixar
 ~
 ~Hold on that does not look right...
 ~^  #icon1{
@@ -57,10 +57,10 @@ body { background: #66ccff !Important }
 ~Thats better.
 ~Here is the list again incase you missed it.
 ~<ῑ>bug_report</i> Programming
+~<ῑ>web_asset</i> Material Design
 ~<ῑ>camera_enhance</i> Photography
-~<ῑ>android</i> Android
 ~<ῑ>star</i> Spacex
-~<ῑ>local_activity</i> Disney
+~<ῑ>local_activity</i> Disney/Pixar
 ~
 ~
 ~Lets talk about my programming skills a little.
@@ -82,17 +82,21 @@ body { background: #66ccff !Important }
 ~border-color: #000529;
 ~border-radius: 10px;
 ~box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+~overflow-y: scroll;
 ~}^
 ~
 ~Now for the text.
 ᴃ<h2>Programming Skills</h2>
 <h3>Languages</h3>
-~<span id='progexp1'>SQL:</span><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i>
-~<span id='progexp1'>C#:</span><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i>
+~<span id='progexp1'>c#</span><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i>
+~<span id='progexp1'>MS SQL/Redshift:</span><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i>
 ~<span id='progexp1'>Javascript:</span><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i>
 ~<span id='progexp1'>CSS:</span><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i>
 ~<span id='progexp1'>Java:</span><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i>
 ~<span id='progexp1'>Ruby:</span><ᵢ>whatshot</i><ᵢ>whatshot</i><ᵢ>whatshot</i>
+~<span id='progexp1'>Objective C:</span><ᵢ>whatshot</i><ᵢ>whatshot</i>
+~<span id='progexp1'>Polymer:</span><ᵢ>whatshot</i><ᵢ>whatshot</i>
+~<span id='progexp1'>Angular:</span><ᵢ>whatshot</i><ᵢ>whatshot</i>
 
 ᴀ~Lets pretty that up a bit
 ~^  #icon2{
@@ -101,18 +105,32 @@ body { background: #66ccff !Important }
 
 ᴃ~~<h3>Education</h3>
 Bacholers Degree in Computer Science from Southern Utah University
+ᴃ~~<h3>Certificates</h3>
+Certified Scrum Master
 ~~<h3>Recent Projects</h3>
 This Website (Isn't it cool).
-~I need to put more here.
+~Photo Wheel (You will see this soon).
 ᴀ~Thats all for that section right now.
 ~
 ~Now that box is to big. :(.
   ~^  #prog-skills{
-    ~overflow-y: scroll;
   ~height:40% !important;
   ~}^
 ᴃ~
-ᴀ~~Thats all for progarmming skills for now.
-~Now maybe we I can show off some of my Photos.  It think they are good for a amiture.
+ᴀ~~
+~Now maybe we I can show off some of my Photos.  It think they are good for an amiture.
 ~Let me put a slide show up for you
+~Actually its been there the whole time.
+~We just have to ask it to start.
+~Here it goes
+~photowheel.start();ṛ
 ~
+~For my other intrests let me add some links for you to check out.
+ᴅ
+~<a href="http://spacex.com" class='link-style'><img src="/img/spacex.png" class='link-style'></a>
+~<a href="http://pixar.com" class='link-style'><img src="/img/disney.png" class='link-style'></a>
+~<a href="http://material.google.com" class='link-style'><img src="/img/material.png" class='link-style'></a>
+ᴀ~~
+~Well thats it. Thanks for viewing my website.
+~If you would like to check me out there are some links below.
+

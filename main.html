@@ -44,6 +44,7 @@ border-radius: 10px;
 	-webkit-box-shadow: inset 0px -2px 2px rgba(0,0,0,1.5), inset 0px 2px 2px rgba(255,255,255,1.8);
 	background-color: #b3b3b3;
   border-radius: 10px;
+     z-index=2;
 }
 #bottom-area {
   position: absolute;
@@ -86,12 +87,45 @@ input[type='range']::-webkit-slider-thumb {
    width: 20px;
 }
 #progexp1 {
-  width:120px;
+  width:250px;
   float: left;
 }
 
 #icon3{
   color:#ff9900;
+}
+
+#photo-area{
+  display:block;
+  width: 50%;
+  height: 60%;
+  top:40%;
+  position: absolute;
+   overflow:hidden;
+
+}
+#links-area{
+  display:block;
+  width: 50%;
+  height: 50%;
+  top:50%;
+  left:50%;
+  position: absolute;
+  overflow:hidden;
+  text-align: center;
+
+}
+
+.link-style{
+  width:40%;
+
+}
+
+#photowheel
+{
+  width: 100%;
+  height: 100%;
+  z-index=1;
 }
   </style>
 </head>
@@ -99,7 +133,11 @@ input[type='range']::-webkit-slider-thumb {
   <div id='body'>
     <div id = 'prog-skills'></div>
 <div id = 'console-area'></div>
-<div id = 'photo-area'></div>
+<div id = 'photo-area'>
+<iframe id='photowheel' src="/photowheel/photowheel.html" allowtransparency="true" frameBorder="0" scrolling="no"></iframe>
+</div>
+<div id ='links-area'>
+</div>
 <div id='bottom-area'>
   <div id='links'>
     <a href="https://github.com/gfportfolio"><img src="/img/github.png" style="width:30px; height:30px"></a>

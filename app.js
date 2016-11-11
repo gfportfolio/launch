@@ -2,6 +2,10 @@
 
 var consoleArea ;
 var style;
+var progskills;
+var photoarea;
+var linksarea
+var photoiframe;
 var timeoutSpeed = 60;
 setup = function(){
   setupAreas();
@@ -14,6 +18,8 @@ setupAreas = function(){
   style = document.getElementById('style-tag');
   progskills = document.getElementById('prog-skills');
   photoarea = document.getElementById('photo-area');
+  photoiframe = document.getElementById('photowheel');
+  linksarea = document.getElementById('links-area');
 }
 
 startAnimation = function(){

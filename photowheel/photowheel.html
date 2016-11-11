@@ -3,19 +3,21 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
   rel="stylesheet">
-  <style>
+  <style id="style-tag">
+  body {background:none transparent;
+  }
+
   .small-circle {
-    height: 100px;
-    width: 100px;
-    border-radius:50px;
-    background-color: white;
+    height: 20vh;
+    width: 20vh;
+    border-radius:20vh;
     position:absolute;
   }
 
   .big-circle{
-    width:490px;
-    height:490px;
-    border-radius:245px;
+    width:50vh;
+    height:50vh;
+    border-radius:50%;
     background-color: black;
     position: absolute;
     z-index: 3;
@@ -31,23 +33,27 @@
   -webkit-border-radius
 }
 
+.hidden{
+  opacity: 0;
+}
+
   .img{
     border-style: solid;
     border-width: 0px;
     //border-color: black;
     z-index:1;
-    -moz-box-shadow:0px 0px 7px #000000;
-    -webkit-box-shadow:0px 0px 7px #000000;
-    box-shadow:0px 0px 7px #000000;
-    -webkit-border-radius
+  //  -moz-box-shadow:0px 0px 7px #000000;
+  //  -webkit-box-shadow:0px 0px 7px #000000;
+  //  box-shadow:0px 0px 7px #000000;
+  //  -webkit-border-radius
   }
 
   #back{
-    top:45%;
-    left:10%;
+  //  top:45%;
+  //  left:10%;
     position:absolute;
     z-index:4;
-    font-size: 80px;
+    font-size: 10vh;
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
@@ -55,53 +61,48 @@
     transform: rotate(180deg);
     opacity: 0;
     color:white;
-    cursor:pointer;
+
   }
 
-  #back:hover{
-    opacity: .8;
-  }
+
 
   #next{
-    top:45%;
-    left:75%;
+  //  top:45%;
+  //  left:75%;
     position:absolute;
     z-index:4;
-    font-size: 80px;
+    font-size: 10vh;
     opacity: 0;
     color:white;
-    cursor:pointer;
   }
 
-  #next:hover{
-    opacity: .8;
-  }
+
 
   #pause{
-    top:45%;
-    left:42%;
+    //top:45%;
+    //left:42%;
     position:absolute;
     z-index:4;
-    font-size: 80px;
+    font-size: 10vh;
     opacity: 0;
     color:white;
-    cursor:pointer;
   }
 
-  #pause:hover{
-    opacity: .8;
-  }
+
+
+
   </style>
 </head>
-<body>
-<div id='big-circle' class='big-circle'>
-  <img id = 'big-circle-img' class='big-circle' src="photoalbum/blank.jpg">
+<body >
+
+<div id='big-circle' >
+  <img id = 'big-circle-img'  >
   <i id='back' class='material-icons ' onclick="backClick()">forward</i>
   <i id='next' class='material-icons ' onclick="nextClick()">forward</i>
   <i id='pause' class='material-icons' onclick="pauseClick()">pause_circle_filled</i>
 </div>
 <div id='circles-holder'>
-  <div id='circle-model' class='small-circle'><img id = 'img' class='small-circle ' src="photoalbum/blank.jpg"></div>
+  <div id='circle-model' ><img id = 'img' ></div>
 </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
